@@ -1,0 +1,72 @@
+@import "mixins";
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+    color: $dark;
+    &:visited {
+        color: $dark;
+    }
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: $dark;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+    display: block !important; // add important to make sure menu works
+    overflow: scroll;
+    max-height: 85vh;
+}
+
+@media screen and (min-width: 40em) {
+    .menu-toggle {
+        display: none !important; // add important to make sure menu works
+    }
+
+    .main-navigation ul {
+        display: block !important; // add important to make sure menu works
+    }
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+    margin: 0 0 $vertical-spacing;
+    overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+

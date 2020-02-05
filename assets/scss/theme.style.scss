@@ -1,0 +1,165 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Blocks
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/* Theme variables */
+@import "mixins";
+/* Normalize */
+@import "normalize";
+/* Typography */
+@import "typography";
+/* Navigation, header style */
+@import "header";
+/* footer style */
+@import "footer";
+/* Accessibility, Alignments, Clearings, Widgets, Content */
+@import "content";
+/* woocommerce style */
+@import "woocommerce";
+
+/* Blocks */
+@import "blocks";
+
+.has-small-font-size {
+    color: $dark;
+}
+
+.has-large-font-size {
+    color: $dark;
+}
+
+.has-huge-font-size {
+    color: $dark;
+}
+
+
+
+/*
+Over write gravity form style
+ */
+.gform_wrapper
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+    width: 100%;
+}
+
+.gfield_label {
+    font-size: 14px !important;
+    color: $dark;
+}
+
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type="submit"],
+.gform_wrapper .gform_page_footer input.button,
+.gform_wrapper .gform_page_footer input[type="submit"] {
+    @include button-primary;
+    color: #ffffff;
+}
+
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type="radio"],
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select {
+    margin-left: 1px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 641px) {
+    .gform_wrapper .gform_footer input.button,
+    .gform_wrapper .gform_footer input[type="submit"],
+    .gform_wrapper .gform_page_footer input.button,
+    .gform_wrapper .gform_page_footer input[type="submit"] {
+        font-size: 14px !important;
+    }
+}
+
+// content spacing
+.entry-content {
+    // make everything not alignfull same width and centered.
+    > *:not(.alignfull) {
+        max-width: $max-wide-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // make padding left and right on mobile devices
+    > .alignfull,
+    > .alignwide,
+    > p,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+        // padding on tablets
+        @include tablets-all {
+            padding-right: 0.9375rem;
+            padding-left: 0.9375rem;
+        }
+        // padding on mobiles phones
+        @include mobiles-all {
+            padding-right: 0.9375rem;
+            padding-left: 0.9375rem;
+        }
+    }
+}
+
+// make a margin right custom class, to avoid style apply to every image on website
+.col-margin-right {
+    margin-right: 48px;
+    @include mobiles-all {
+        margin-right: initial;
+    }
+}
+
+// remove line-height
+.line-height-0 {
+    line-height: 0;
+}
+
+// add margin on post and standard pages
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 4em 0 0;
+}
+
+// remove margin on home page
+.home {
+    .page-content,
+    .entry-content,
+    .entry-summary {
+        margin: 0em 0 0;
+    }
+}
+
+.alignwide {
+    max-width: $max-wide-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignfull {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+}
