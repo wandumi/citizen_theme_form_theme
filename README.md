@@ -1,5 +1,8 @@
 # README #
 
+# Changelog
+
+Updated dev dependencies. Note 
 
 ### Instructions ###
 
@@ -22,5 +25,8 @@
 * Create an AJAX submit action. Onclick the form should use JavaScript to post the data to a WordPress AJAX action.
 * The data does not have to be databased, but the action should return JSON which is then used on the page. The JSON can be any
 submit success (or failure ) message you like.
+  
+### Tips
 
-Enjoy.
+This test is designed to check your ability with styles, NPM, JS and WordPress principles such as actions and filters and wpcs. It may seem like an extensive test,
+but we don't want you to spend too much time on it. Don't go overboard, just enjoy.

@@ -1,5 +1,5 @@
 const autoprefixer = require("autoprefixer");
-const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+//const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 //const PurgecssPlugin = require('purgecss-webpack-plugin');

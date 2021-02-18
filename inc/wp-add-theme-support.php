@@ -40,7 +40,7 @@ add_theme_support( 'html5', array(
 ) );
 
 // Set up the WordPress core custom background feature.
-add_theme_support( 'custom-background', apply_filters( 'futurelab_base_custom_background_args', array(
+add_theme_support( 'custom-background', apply_filters( 'theme_base_custom_background_args', array(
 	'default-color' => 'ffffff',
 	'default-image' => '',
 ) ) );
